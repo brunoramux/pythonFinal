@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css ">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap- theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cliente</title>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid"> 
+            <div class="navbar-header">
+                <h1>Listagem de Chamados</h1> 
+            </div>
+        </div>
+    </nav>
+    <h1>Lista de Chamados</h1>
+    <table class="table"> 
+        <tr>
+            <th>Cliente</th>
+            <th>Titulo</th>
+            <th>Descricao</th>
+            <th>Data de Criacao</th>
+        </tr>
+        {% for chamados in object_list %}
+        <tr>
+            <td>{{ chamados.idCliente }}</td>
+            <td>{{ chamados.title }}</td>
+            <td>{{ chamados.description  }}</td>
+            <td>{{ chamados.createdAt }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
